@@ -11,7 +11,7 @@ function Navbar() {
     
     useEffect(() => {
         if (user) {
-            axios.get('http://localhost:3001/api/stores').then(res => {
+            axios.get('https://order-importer-backend.vercel.app/api/stores').then(res => {
                 setStores(res.data);
             });
         }

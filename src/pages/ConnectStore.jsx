@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Store, Key, ArrowRight } from 'lucide-react';
 
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = 'https://order-importer-backend.vercel.app/api';
 
 function ConnectStore({ onConnect }) {
   const [storeName, setStoreName] = useState('');

@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
         if (token) {
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
             // Fetch user profile
-            axios.get('http://localhost:3001/api/auth/me')
+            axios.get('https://order-importer-backend.vercel.app/api/auth/me')
                 .then(res => {
                     setUser(res.data.user);
                 })
