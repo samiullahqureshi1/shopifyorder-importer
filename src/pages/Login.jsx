@@ -19,7 +19,7 @@ function Login() {
         setError('');
 
         try {
-            const res = await axios.post('https://order-importer-backend.vercel.app/api/auth/login', { email, password });
+            const res = await axios.post('http://localhost:3001/api/auth/login', { email, password });
             login(res.data.token, res.data.user);
             navigate('/dashboard');
         } catch (err) {

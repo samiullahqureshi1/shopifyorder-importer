@@ -14,7 +14,7 @@ function Dashboard() {
 
     const fetchStores = async () => {
         try {
-            const res = await axios.get('https://order-importer-backend.vercel.app/api/stores');
+            const res = await axios.get('http://localhost:3001/api/stores');
             setStores(res.data);
             
             // Auto-select first store if none is active
@@ -35,7 +35,7 @@ function Dashboard() {
     const handleDelete = async (id) => {
         if (!window.confirm('Are you sure you want to remove this store?')) return;
         try {
-            await axios.delete(`https://order-importer-backend.vercel.app/api/stores/${id}`);
+            await axios.delete(`http://localhost:3001/api/stores/${id}`);
             if (activeStoreId == id) changeActiveStore(null);
             fetchStores();
         } catch (e) {

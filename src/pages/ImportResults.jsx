@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Home, RefreshCcw } from 'lucide-react';
 
-const API_BASE = 'https://order-importer-backend.vercel.app/api';
+const API_BASE = 'http://localhost:3001/api';
 
 function ImportResults() {
   const [data, setData] = useState(null);
